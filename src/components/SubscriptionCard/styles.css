@@ -1,0 +1,46 @@
+.card-section {
+    background: rgb(70,216,245);
+    background: linear-gradient(139deg, rgba(70,216,245,1) 12%, rgba(191,163,219,1) 30%, rgba(220,136,228,1) 51%, rgba(238,151,202,1) 69%, rgba(255,247,164,1) 85%);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5.5px );
+-webkit-backdrop-filter: blur( 5.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.features-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+}
+
+.btn-black{
+    background-color: black;
+    color: white;
+    border: none;
+}
+.btn-black:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.733);
+}
+
+.btn-trans {
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+}
+.btn-trans:hover {
+    cursor: pointer;
+    background-color: rgba( 255, 255, 255, 0.18 );
+}
+
+ul {
+    text-align: left;
+}

@@ -1,0 +1,44 @@
+.header-container {
+    margin-top: 4vh;
+    display: flex;
+    width: 80%;
+    height: 15vh;
+    justify-content: space-around;
+    
+
+    font-family: "Antic Didone", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 58px;
+    letter-spacing: -2.43px;
+    line-height: 97%;
+    text-decoration: none;
+    text-transform: none;
+    color: #BEACA1;
+}
+
+.header-text {
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+}
+
+.fake-header-button { 
+    height: 100%;
+    width: 100%;
+    background-color: rgb(106, 106, 64);
+    width: 30%;
+}
+.fake-header-button:hover {
+    cursor: pointer;
+}
+.icon-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-icon svg {
+height: 100%;
+width: 100%;
+z-index: 1;
+}
