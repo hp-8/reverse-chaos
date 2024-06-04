@@ -1,0 +1,13 @@
+.location {
+    display: flex;
+    flex-direction: column;
+}
+
+.location ul {
+    display: flex;
+}
+
+.icon-sub {
+    display: flex;
+    position: absolute;
+}
