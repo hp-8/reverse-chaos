@@ -1,44 +1,138 @@
-.card-section {
-    background: rgb(70,216,245);
-    background: linear-gradient(139deg, rgba(70,216,245,1) 12%, rgba(191,163,219,1) 30%, rgba(220,136,228,1) 51%, rgba(238,151,202,1) 69%, rgba(255,247,164,1) 85%);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 5.5px );
--webkit-backdrop-filter: blur( 5.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+/* styles.css */
+
+.card-container {
+    position: relative; /* Make sure the card container is relatively positioned */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 880px;
+    margin: auto;
+    padding: 20px;
 }
 
+.card-section {
+    position: relative; /* Ensure the pseudo-element is positioned relative to the card section */
+    background: rgb(70,216,245);
+    background: linear-gradient(139deg, rgba(70,216,245,1) 12%, rgba(191,163,219,1) 30%, rgba(220,136,228,1) 51%, rgba(238,151,202,1) 69%, rgba(255,247,164,1) 85%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Hide overflow to keep the glossy effect within bounds */
+}
+
+.card-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+.card-section:hover::before {
+    opacity: 1;
+}
+
+.card-header-text {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    color: black;
+}
 
 .features-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.features {
+    font-weight: 600;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: auto;
+}
+
+.features ul {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 0;
+    list-style: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.features ul:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features ul svg {
+    margin-right: 10px;
 }
 
 .buttons {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    position: relative;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.btn-black{
+.btn-black,
+.btn-trans {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px 0;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-black {
     background-color: black;
     color: white;
     border: none;
+    border-radius: 5px;
 }
-.btn-black:hover{
+
+.btn-black:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.733);
+    background: linear-gradient(45deg, #000, #555);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-trans {
     background-color: transparent;
     text-decoration: none;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 5px;
 }
+
 .btn-trans:hover {
     cursor: pointer;
-    background-color: rgba( 255, 255, 255, 0.18 );
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset;
 }
 
 ul {

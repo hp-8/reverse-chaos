@@ -6,7 +6,11 @@ import { ListSection } from './components/listSection';
 import { SubscriptionCard } from './components/SubscriptionCard';
 import { Locations } from './components/Locations';
 
+
 function App() {
+
+  
+
   return (
     <div className="App">
      <Header/>

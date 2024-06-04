@@ -3,6 +3,8 @@ body {
   color: whitesmoke;
 }
 .App {
-  
+  font-family: "Antic Didone", serif;
   text-align: center;
+  max-width: 1200px;
+  margin: auto;
 }
