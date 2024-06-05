@@ -1,34 +1,26 @@
-
+/* General container styles */
 .header-container {
-    font-family: "Antic Didone", serif;
-    font-weight: 400;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 25vh;
-    position: relative;
-    font-size: 2.5rem;
-    color: rgb(242, 113, 0);
-    overflow: hidden;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Vertically align items */
+    padding: 20px; /* Add some padding */
+  
+  }
+  
+  /* Text styles */
+  .header-text {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold;
+    line-height: 1.2; /* Slightly adjust line height for spacing */
+  }
+  
+  /* Scroll link styles */
+  .scroll-link {
+    padding: 10px 20px; /* Add padding to the button */
     
-}
-
-
-.header-text {
-    
-}
-
-.cursor {
-    background-color: rgb(242, 113, 0);
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-
-.scroll-container a:any-link {
-    text-decoration: none;
-    color: rgb(242, 113, 0);
-}
+    color: white;
+    border: none;
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer;
+    text-decoration: none; /* Remove default underline */
+  }
